@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101c2c">
+<title>Sam's Institute of English | Learn. Speak. Succeed.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#101c2c;
+  --navy2:#172b42;
+  --gold:#c9a45c;
+  --gold-light:#ead7ae;
+  --cream:#f8f6f1;
+  --white:#ffffff;
+  --text:#202a35;
+  --muted:#697584;
+  --line:#e8e5de;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  color:var(--text);
+  background:var(--cream);
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1160px,90%);margin:auto}
+
+/* TOP BAR */
+.topbar{
+  background:var(--navy);
+  color:#e8eaf0;
+  padding:10px 0;
+  font-size:11px;
+  letter-spacing:.5px;
+}
+.topbar .container{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+}
+.topbar strong{color:var(--gold-light)}
+
+/* NAVIGATION */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(248,246,241,.94);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(20,30,40,.08);
+}
+.nav{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:49px;height:49px;
+  border:1px solid var(--gold);
+  background:var(--navy);
+  color:var(--gold);
+  display:grid;place-items:center;
+  font-family:var(--serif);
+  font-size:23px;
+  border-radius:12px;
+  overflow:hidden;
+}
+.logo img{width:100%;height:100%;object-fit:contain}
+.brand-name{
+  font-family:var(--serif);
+  color:var(--navy);
+  font-weight:700;
+  font-size:18px;
+  line-height:1.2;
+}
+.brand-name small{
+  display:block;
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:3px;
+  color:var(--gold);
+  margin-top:5px;
+}
+nav{display:flex;align-items:center;gap:27px}
+nav a{
+  color:#4e5865;
+  font-size:12px;
+  font-weight:700;
+  transition:.25s;
+}
+nav a:hover{color:#a77e35}
+.nav-btn,.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  padding:14px 23px;
+  border-radius:4px;
+  font-size:12px;
+  font-weight:800;
+  transition:.3s;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+.nav-btn,.btn-gold{
+  background:var(--gold);
+  color:var(--navy);
+}
+.nav-btn:hover,.btn-gold:hover{
+  background:#dfbd7b;
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px #c9a45c35;
+}
+.menu-btn{
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  padding:9px 12px;
+  border-radius:5px;
+  font-size:21px;
+  color:var(--navy);
+}
+
+/* HERO */
+.hero{
+  background:var(--navy);
+  color:white;
+  position:relative;
+  overflow:hidden;
+  padding:100px 0 105px;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:560px;height:560px;
+  border:1px solid #c9a45c30;
+  border-radius:50%;
+  right:-170px;top:-230px;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:410px;height:410px;
+  border:1px solid #c9a45c25;
+  border-radius:50%;
+  right:-90px;top:-150px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:70px;
+  position:relative;
+  z-index:2;
+}
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--gold);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.eyebrow:before{
+  content:"";
+  width:30px;height:1px;
+  background:var(--gold);
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(45px,6vw,76px);
+  line-height:1.08;
+  font-weight:600;
+  margin:25px 0;
+  letter-spacing:-1.5px;
+}
+.hero h1 em{color:var(--gold);font-weight:500}
+.hero-description{
+  color:#c0cad5;
+  font-size:15px;
+  line-height:1.9;
+  max-width:550px;
+}
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+  margin-top:32px;
+}
+.btn-outline{
+  border-color:#ffffff55;
+  color:white;
+  background:transparent;
+}
+.btn-outline:hover{
+  background:white;color:var(--navy);
+}
+.hero-points{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-top:37px;
+  color:#d2d9e1;
+  font-size:11px;
+}
+.hero-points span:before{
+  content:"✓";
+  color:var(--gold);
+  margin-right:8px;
+  font-weight:900;
+}
+.hero-visual{
+  min-height:430px;
+  border:1px solid #c9a45c65;
+  padding:15px;
+  position:relative;
+  border-radius:5px;
+}
+.hero-visual-inner{
+  min-height:398px;
+  background:
+  linear-gradient(145deg,#263b50,#101c2c);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:30px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-visual-inner:before{
+  content:"A";
+  position:absolute;
+  right:15px;top:-60px;
+  font-family:var(--serif);
+  font-size:350px;
+  color:#ffffff08;
+}
+.visual-top,.visual-bottom{position:relative;z-index:2}
+.visual-tag{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:800;
+}
+.visual-heading{
+  font-family:var(--serif);
+  font-size:36px;
+  line-height:1.2;
+  color:white;
+  margin-top:18px;
+}
+.visual-line{
+  width:55px;height:2px;
+  background:var(--gold);
+  margin:22px 0;
+}
+.visual-bottom{
+  border-top:1px solid #ffffff2a;
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  color:#c5cfda;
+  font-size:11px;
+}
+.visual-bottom strong{
+  display:block;
+  color:var(--gold-light);
+  font-size:17px;
+  margin-bottom:4px;
+}
+
+/* TRUST BAR */
+.trust{
+  background:var(--gold);
+  padding:24px 0;
+}
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  text-align:center;
+  gap:20px;
+}
+.trust-item strong{
+  display:block;
+  font-family:var(--serif);
+  font-size:21px;
+  color:var(--navy);
+}
+.trust-item span{
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#344050;
+}
+
+/* COMMON SECTIONS */
+section{padding:95px 0}
+.section-heading{
+  max-width:680px;
+  margin:0 auto 48px;
+  text-align:center;
+}
+.section-heading .eyebrow{justify-content:center}
+.section-heading h2{
+  font-family:var(--serif);
+  color:var(--navy);
+  font-size:clamp(32px,4.5vw,48px);
+  line-height:1.15;
+  margin:17px 0;
+}
+.section-heading p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.9;
+}
+/* COURSES */
+.courses{background:var(--cream)}
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.course-card{
+  background:white;
+  border:1px solid var(--line);
+  padding:30px 25px;
+  position:relative;
+  transition:.35s;
+  overflow:hidden;
+}
+.course-card:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;
+  width:0;height:3px;
+  background:var(--gold);
+  transition:.35s;
+}
+.course-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px #101c2c12;
+}
+.course-card:hover:before{width:100%}
+.course-number{
+  color:var(--gold);
+  font-family:var(--serif);
+  font-size:25px;
+  margin-bottom:22px;
+}
+.course-card h3{
+  color:var(--navy);
+  font-family:var(--serif);
+  font-size:21px;
+  margin-bottom:12px;
+}
+.course-card p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.85;
+  min-height:65px;
+}
+.course-link{
+  display:inline-block;
+  color:#a77e35;
+  font-size:11px;
+  font-weight:800;
+  margin-top:20px;
+}
+
+/* ABOUT */
+.about{
+  background:white;
+}
+.about-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  align-items:center;
+  gap:75px;
+}
+.about-visual{
+  background:var(--navy);
+  min-height:440px;
+  padding:18px;
+  position:relative;
+}
+.about-visual-inner{
+  min-height:404px;
+  border:1px solid #c9a45c65;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:30px;
+  background:
+  radial-gradient(circle at 75% 25%,#33475d,transparent 55%),
+  linear-gradient(145deg,#172b42,#101c2c);
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+.about-visual-inner:before{
+  content:"";
+  position:absolute;
+  top:-50px;right:10px;
+  font-family:var(--serif);
+  font-size:260px;
+  color:#ffffff0b;
+}
+.about-visual-inner span{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:800;
+  position:relative;
+}
+.about-visual-inner h3{
+  font-family:var(--serif);
+  font-size:34px;
+  line-height:1.2;
+  margin-top:15px;
+  position:relative;
+}
+.about-copy h2{
+  font-family:var(--serif);
+  color:var(--navy);
+  font-size:clamp(32px,4vw,45px);
+  line-height:1.15;
+  margin:18px 0;
+}
+.about-copy p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:2;
+  margin-bottom:15px;
+}
+.instructor-name{
+  color:var(--navy);
+  font-family:var(--serif);
+  font-size:25px;
+  margin:22px 0 5px;
+}
+.instructor-role{
+  color:#a77e35;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin:27px 0;
+}
+.feature{
+  color:var(--navy);
+  font-size:12px;
+  font-weight:700;
+}
+.feature:before{
+  content:"✓";
+  color:var(--gold);
+  margin-right:9px;
+}
+
+/* LEARNING METHOD */
+.method{background:var(--navy);color:white}
+.method .section-heading h2{color:white}
+.method .section-heading p{color:#b7c2cf}
+.method .eyebrow{color:var(--gold)}
+.method-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.method-card{
+  border:1px solid #ffffff25;
+  padding:30px;
+  background:#ffffff08;
+  transition:.3s;
+}
+.method-card:hover{
+  background:#ffffff12;
+  transform:translateY(-5px);
+}
+.method-card small{
+  color:var(--gold);
+  letter-spacing:2px;
+  font-size:10px;
+  font-weight:800;
+}
+.method-card h3{
+  font-family:var(--serif);
+  font-size:23px;
+  margin:20px 0 12px;
+}
+.method-card p{
+  color:#c0cad5;
+  font-size:12px;
+  line-height:1.9;
+}
+
+/* INTERVIEW */
+.interview{
+  background:#f0ede5;
+}
+.interview-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+.interview-copy h2{
+  font-family:var(--serif);
+  color:var(--navy);
+  font-size:clamp(32px,4vw,46px);
+  line-height:1.15;
+  margin:18px 0;
+}
+.interview-copy p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
+}
+.interview-list{
+  display:grid;
+  gap:16px;
+  margin-top:25px;
+}
+.interview-list div{
+  display:flex;
+  gap:13px;
+  align-items:center;
+  color:var(--navy);
+  font-size:12px;
+  font-weight:700;
+}
+.interview-list span{
+  width:28px;height:28px;
+  display:grid;place-items:center;
+  background:white;
+  color:#a77e35;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.interview-panel{
+  background:var(--navy);
+  color:white;
+  padding:38px;
+  position:relative;
+}
+.interview-panel:after{
+  content:"“";
+  position:absolute;
+  right:20px;top:-10px;
+  font-family:var(--serif);
+  font-size:110px;
+  color:#c9a45c30;
+}
+.interview-panel small{
+  color:var(--gold);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+.interview-panel h3{
+  font-family:var(--serif);
+  font-size:30px;
+  line-height:1.25;
+  margin:20px 0;
+}
+.interview-panel p{
+  color:#c2ccd8;
+  font-size:13px;
+  line-height:1.9;
+}
+
+/* CTA */
+.cta{padding:0 0 95px;background:#f0ede5}
+.cta-inner{
+  background:var(--gold);
+  padding:45px 50px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+.cta-inner h2{
+  font-family:var(--serif);
+  font-size:clamp(25px,3vw,36px);
+  color:var(--navy);
+}
+.cta-inner p{
+  color:#394354;
+  font-size:12px;
+  margin-top:10px;
+}
+.cta-inner .btn{
+  background:var(--navy);
+  color:white;
+  white-space:nowrap;
+}
+.cta-inner .btn:hover{
+  background:#263d58;
+  transform:translateY(-3px);
+}
+
+/* CONTACT */
+.contact{background:white}
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:55px;
+  align-items:start;
+}
+.contact-info h2{
+  font-family:var(--serif);
+  color:var(--navy);
+  font-size:42px;
+  line-height:1.15;
+  margin:18px 0;
+}
+.contact-info p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
+}
+.contact-detail{
+  display:grid;
+  gap:18px;
+  margin-top:30px;
+}
+.contact-detail div{
+  display:flex;
+  gap:13px;
+  align-items:center;
+  color:var(--navy);
+  font-size:12px;
+  font-weight:700;
+}
+.contact-icon{
+  width:39px;height:39px;
+  display:grid;place-items:center;
+  background:#f3eddf;
+  color:#9b742e;
+  font-size:17px;
+}
+.enquiry-form{
+  border:1px solid var(--line);
+  padding:32px;
+  background:var(--cream);
+}
+.enquiry-form h3{
+  font-family:var(--serif);
+  color:var(--navy);
+  font-size:26px;
+  margin-bottom:25px;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+.field{display:grid;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{
+  color:#586575;
+  font-size:11px;
+  font-weight:800;
+}
+.field input,.field select,.field textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #dedbd3;
+  background:white;
+  outline:none;
+  color:var(--text);
+  font-size:12px;
+  border-radius:2px;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--gold);
+}
+.field textarea{min-height:100px;resize:vertical}
+.enquiry-form button{width:100%;margin-top:20px}
+.form-note{
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.7;
+  margin-top:13px;
+}
+
+/* FOOTER */
+footer{
+  background:#0b1523;
+  color:#c2cbd6;
+  padding:38px 0;
+}
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.footer-title{
+  color:white;
+  font-family:var(--serif);
+  font-size:22px;
+}
+.footer-title span{color:var(--gold)}
+.footer-copy{
+  font-size:11px;
+  line-height:1.8;
+}
+.footer-bottom{
+  border-top:1px solid #ffffff20;
+  margin-top:27px;
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+  font-size:10px;
+  color:#8996a7;
+}
+
+/* ANIMATIONS */
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+  *{transition:none!important}
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{gap:14px}
+  .nav-btn{display:none}
+  .hero-grid{gap:35px}
+  .about-grid{gap:35px}
+  .course-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .container{width:90%}
+  .topbar .container{justify-content:center;text-align:center}
+  .nav{min-height:70px}
+  .brand-name{font-size:15px}
+  .logo{width:42px;height:42px}
+  .menu-btn{display:block}
+  nav{
+    display:none;
+    position:absolute;
+    top:70px;left:0;right:0;
+    background:var(--cream);
+    padding:22px 5%;
+    flex-direction:column;
+    align-items:flex-start;
+    border-bottom:1px solid var(--line);
+  }
+  nav.open{display:flex}
+  .hero{padding:65px 0}
+  .hero-grid{grid-template-columns:1fr}
+  .hero h1{font-size:48px}
+  .hero-description{font-size:13px}
+  .hero-visual{min-height:350px}
+  .hero-visual-inner{min-height:318px;padding:22px}
+  .visual-heading{font-size:29px}
+  .trust-grid{grid-template-columns:1fr;gap:16px}
+  section{padding:68px 0}
+  .section-heading{margin-bottom:32px}
+  .course-grid{grid-template-columns:1fr}
+  .course-card p{min-height:0}
+  .about-grid,.interview-grid,.contact-grid{grid-template-columns:1fr}
+  .about-visual{min-height:330px}
+  .about-visual-inner{min-height:294px}
+  .method-grid{grid-template-columns:1fr}
+  .cta{padding-bottom:68px}
+  .cta-inner{padding:30px 23px;align-items:flex-start;flex-direction:column}
+  .form-grid{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+  .enquiry-form{padding:23px}
+  .contact-info h2{font-size:36px}
+  .footer-top,.footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span><strong>ADMISSIONS OPEN</strong> &nbsp; English Coaching & Competitive Exam Preparation</span>
+    <span>Learn with purpose. Succeed with confidence.</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <div class="logo">S</div>
+      <div class="brand-name">
+        SAM'S INSTITUTE
+        <small>OF ENGLISH</small>
+      </div>
+    </a>
+
+    <nav id="mainNav">
+      <a href="#home">HOME</a>
+      <a href="#courses">COURSES</a>
+      <a href="#about">ABOUT</a>
+      <a href="#interview">INTERVIEW SKILLS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <a href="#contact" class="nav-btn">ENQUIRE NOW ↗</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="reveal">
+      <div class="eyebrow">Welcome to Sam's Institute of English</div>
+
+      <h1>
+        Master English.<br>
+        <em>Unlock Your Future.</em>
+      </h1>
+
+      <p class="hero-description">
+        Build strong English fundamentals, prepare for competitive
+        examinations and develop the confidence to communicate
+        effectively. Your journey towards better English starts here.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#courses" class="btn btn-gold">EXPLORE OUR COURSES ↗</a>
+        <a href="#about" class="btn btn-outline">MEET YOUR INSTRUCTOR</a>
+      </div>
+
+      <div class="hero-points">
+        <span>Concept-based learning</span>
+        <span>Exam-focused preparation</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-visual-inner">
+        <div class="visual-top">
+          <div class="visual-tag">YOUR ENGLISH LEARNING DESTINATION</div>
+          <div class="visual-heading">
+            Knowledge.<br>
+            Confidence.<br>
+            Achievement.
+          </div>
+          <div class="visual-line"></div>
+          <p style="color:#c2ccd7;font-size:12px;line-height:1.8">
+            Learn English with clarity and prepare yourself
+            for the opportunities ahead.
+          </p>
+        </div>
+
+        <div class="visual-bottom">
+          <div>
+            <strong>EXAM</strong>
+            Preparation
+          </div>
+          <div>
+            <strong>SPOKEN</strong>
+            Communication
+          </div>
+          <div>
+            <strong>SKILLS</strong>
+            Development
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <strong>Strong Foundations</strong>
+      <span>Understand English Better</span>
+    </div>
+    <div class="trust-item">
+      <strong>Focused Preparation</strong>
+      <span>Study With Direction</span>
+    </div>
+    <div class="trust-item">
+      <strong>Better Communication</strong>
+      <span>Speak With Confidence</span>
+    </div>
+  </div>
+</div>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">Our Programmes</div>
+      <h2>Find the Right Course for Your Ambition</h2>
+      <p>
+        From competitive examination preparation to everyday English
+        communication, explore programmes designed to help you improve
+        step by step.
+      </p>
+    </div>
+
+    <div class="course-grid">
+
+      <article class="course-card reveal">
+        <div class="course-number">01</div>
+        <h3>AP SGT & TET</h3>
+        <p>Prepare English grammar, vocabulary and important language concepts with focused examination practice.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-number">02</div>
+        <h3>TG SGT & TET</h3>
+        <p>Develop a strong understanding of English topics through structured lessons and guided practice.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-number">03</div>
+        <h3>AP SI & PC</h3>
+        <p>Strengthen your English language skills with concept-based learning and examination preparation.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-number">04</div>
+        <h3>TG SI & PC</h3>
+        <p>Improve accuracy, grammar and language understanding with targeted learning and practice.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-number">05</div>
+        <h3>English Grammar</h3>
+        <p>Understand essential grammar rules, sentence structures and common English language concepts.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-number">06</div>
+        <h3>Vocabulary & Practice</h3>
+        <p>Improve word knowledge, reading skills and language accuracy through regular exercises.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-number">07</div>
+        <h3>Intermediate English</h3>
+        <p>English support for Inter students, including grammar, reading, writing and language development.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-number">08</div>
+        <h3>Basic English</h3>
+        <p>Start from the fundamentals and improve everyday speaking, reading, writing and vocabulary.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-number">09</div>
+        <h3>Interview Skills & Spoken English</h3>
+        <p>Practise self-introduction, interview answers, spoken English and confident communication.</p>
+        <a class="course-link" href="#contact">ENQUIRE ABOUT THIS COURSE ↗</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT INSTRUCTOR -->
+<section class="about" id="about">
+  <div class="container about-grid">
+
+    <div class="about-visual reveal">
+      <div class="about-visual-inner">
+        <span>YOUR GUIDE TO BETTER ENGLISH</span>
+        <h3>Learn with clarity.<br>Grow with confidence.</h3>
+      </div>
+    </div>
+
+    <div class="about-copy reveal">
+      <div class="eyebrow">Meet Your Instructor</div>
+      <h2>Guidance That Makes Learning Meaningful.</h2>
+
+      <p>
+        Welcome to Sam's Institute of English, guided by
+        <strong>Hari Prasad</strong>. The institute focuses on helping
+        students build their English language skills through clear
+        explanations, structured learning and regular practice.
+      </p>
+
+      <p>
+        Whether your goal is a competitive examination, improving
+        everyday English or preparing for an interview, the aim is
+        to help you learn with confidence and clarity.
+      </p>
+
+      <div class="instructor-name">Hari Prasad</div>
+      <div class="instructor-role">ENGLISH INSTRUCTOR</div>
+
+      <div class="feature-grid">
+        <div class="feature">Simple explanations</div>
+        <div class="feature">Concept-based lessons</div>
+        <div class="feature">Practice-oriented learning</div>
+        <div class="feature">Student-focused guidance</div>
+      </div>
+
+      <a href="#contact" class="btn btn-gold">CONNECT WITH US ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- LEARNING METHOD -->
+<section class="method" id="approach">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">Our Learning Approach</div>
+      <h2>A Better Way to Learn English.</h2>
+      <p>
+        A structured learning process that helps students understand,
+        practise and improve consistently.
+      </p>
+    </div>
+
+    <div class="method-grid">
+
+      <div class="method-card reveal">
+        <small>01 / UNDERSTAND</small>
+        <h3>Build Your Foundation</h3>
+        <p>
+          Learn important English concepts through clear explanations,
+          examples and easy-to-follow lessons.
+        </p>
+      </div>
+
+      <div class="method-card reveal">
+        <small>02 / PRACTISE</small>
+        <h3>Apply Your Knowledge</h3>
+        <p>
+          Strengthen your understanding through exercises, questions
+          and regular language practice.
+        </p>
+      </div>
+
+      <div class="method-card reveal">
+        <small>03 / IMPROVE</small>
+        <h3>Move Forward With Confidence</h3>
+        <p>
+          Revise important topics, improve your weak areas and work
+          towards your learning goals.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTERVIEW SKILLS -->
+<section class="interview" id="interview">
+  <div class="container interview-grid">
+
+    <div class="interview-copy reveal">
+      <div class="eyebrow">Beyond The Classroom</div>
+      <h2>Speak Confidently. Face Interviews Successfully.</h2>
+
+      <p>
+        Good communication can make a difference. Develop your
+        English speaking skills and learn how to express your
+        thoughts clearly in interviews and professional situations.
+      </p>
+
+      <div class="interview-list">
+        <div><span>✓</span> Self-introduction practice</div>
+        <div><span>✓</span> Common interview questions</div>
+        <div><span>✓</span> HR interview preparation</div>
+        <div><span>✓</span> Spoken English improvement</div>
+        <div><span>✓</span> Mock interview practice</div>
+        <div><span>✓</span> Professional communication</div>
+      </div>
+
+      <a href="#contact" class="btn btn-gold" style="margin-top:30px">
+        ENQUIRE ABOUT INTERVIEW CLASSES ↗
+      </a>
+    </div>
+
+    <div class="interview-panel reveal">
+      <small>CONFIDENCE STARTS WITH PRACTICE</small>
+      <h3>Your words matter. Learn to express them with confidence.</h3>
+      <p>
+        Practise speaking naturally, prepare thoughtful answers
+        and improve your ability to communicate in English.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<div class="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div>
+        <h2>Take the First Step Towards Your Goal.</h2>
+        <p>Contact us to know about courses, admissions and class details.</p>
+      </div>
+      <a href="#contact" class="btn">ENQUIRE NOW ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+
+    <div class="contact-info reveal">
+      <div class="eyebrow">Contact The Institute</div>
+      <h2>Let's Start Your Learning Journey.</h2>
+
+      <p>
+        Have questions about courses, admissions or class schedules?
+        Send an enquiry and get in touch with the institute.
+      </p>
+
+      <div class="contact-detail">
+        <div>
+          <span class="contact-icon">✉</span>
+          <span>EMAIL: [ADD EMAIL ADDRESS]</span>
+        </div>
+
+        <div>
+          <span class="contact-icon">☎</span>
+          <span>PHONE: [ADD PHONE NUMBER]</span>
+        </div>
+
+        <div>
+          <span class="contact-icon">⌖</span>
+          <span>LOCATION: [ADD INSTITUTE ADDRESS]</span>
+        </div>
+
+        <div>
+          <span class="contact-icon">◷</span>
+          <span>CLASS TIMINGS: [ADD TIMINGS]</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="enquiry-form reveal" id="enquiryForm">
+      <h3>Student Enquiry Form</h3>
+
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="name">FULL NAME</label>
+          <input id="name" type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">PHONE NUMBER</label>
+          <input id="phone" type="tel" placeholder="Enter phone number" required>
+        </div>
+
+        <div class="field full">
+          <label for="course">SELECT YOUR COURSE</label>
+          <select id="course" required>
+            <option value="">Choose a course</option>
+            <option>AP SGT & TET</option>
+            <option>TG SGT & TET</option>
+            <option>AP SI & PC</option>
+            <option>TG SI & PC</option>
+            <option>English Grammar</option>
+            <option>Vocabulary & Practice</option>
+            <option>Intermediate English</option>
+            <option>Basic English</option>
+            <option>Interview Skills & Spoken English</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="message">YOUR MESSAGE</label>
+          <textarea id="message" placeholder="Write your enquiry here..."></textarea>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn btn-gold">
+        SUBMIT ENQUIRY ↗
+      </button>
+
+      <p class="form-note" id="formNote">
+        Demo form. Connect the institute's WhatsApp number or email
+        to receive actual student enquiries.
+      </p>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="footer-top">
+      <div class="footer-title">
+        SAM'S <span>INSTITUTE</span> OF ENGLISH
+      </div>
+
+      <div class="footer-copy">
+        Learn with purpose.<br>
+        Succeed with confidence.
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Sam's Institute of English. All rights reserved.</span>
+      <span>Designed for better learning and brighter futures.</span>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+const menuBtn = document.getElementById("menuBtn");
+const mainNav = document.getElementById("mainNav");
+
+menuBtn.addEventListener("click", function(){
+  mainNav.classList.toggle("open");
+  menuBtn.textContent =
+    mainNav.classList.contains("open") ? "×" : "☰";
+});
+
+mainNav.querySelectorAll("a").forEach(function(link){
+  link.addEventListener("click",function(){
+    mainNav.classList.remove("open");
+    menuBtn.textContent = "☰";
+  });
+});
+
+/* CURRENT YEAR */
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+/* SCROLL ANIMATION */
+const observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
+
+document.querySelectorAll(".reveal").forEach(function(element){
+  observer.observe(element);
+});
+
+/* DEMO ENQUIRY FORM */
+document.getElementById("enquiryForm").addEventListener("submit",function(event){
+  event.preventDefault();
+
+  document.getElementById("formNote").textContent =
+    "Thank you! This is currently a demo form. Connect WhatsApp or email to activate real enquiry delivery.";
+
+  document.getElementById("formNote").style.color = "#99732e";
+});
+</script>
+
+</body>
+</html>
